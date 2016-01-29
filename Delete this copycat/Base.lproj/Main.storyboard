@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Delete_this_copycat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-Ah-VxM">
+                                <rect key="frame" x="-148" y="-115" width="602" height="800"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="5uW-wI-vrC">
+                                <rect key="frame" x="-148" y="-103" width="642" height="795"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HANGERS" translatesAutoresizingMaskIntoConstraints="NO" id="kSW-l9-Cub">
+                                <rect key="frame" x="40" y="20" width="300" height="185"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9By-0H-JKV">
+                                <rect key="frame" x="140" y="240" width="94" height="68"/>
+                                <state key="normal" title="Hide Blue"/>
+                                <connections>
+                                    <action selector="HideBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wFW-z8-zBa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiC-1t-Y3i">
+                                <rect key="frame" x="121" y="357" width="113" height="58"/>
+                                <state key="normal" title="Hide Red"/>
+                                <connections>
+                                    <action selector="HideRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Kj-vd-IFb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="BlueBG" destination="JI2-Ah-VxM" id="scy-Ex-EiY"/>
+                        <outlet property="HideBlue" destination="9By-0H-JKV" id="7iK-p3-zMm"/>
+                        <outlet property="HideRed" destination="NiC-1t-Y3i" id="cSw-zg-ne3"/>
+                        <outlet property="Logo" destination="kSW-l9-Cub" id="g0u-7P-Wot"/>
+                        <outlet property="RedBG" destination="5uW-wI-vrC" id="sgi-7F-HcP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="268.5" y="195.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HANGERS" width="503" height="107"/>
+        <image name="blue" width="1667" height="1667"/>
+        <image name="red" width="1667" height="1667"/>
+    </resources>
 </document>
